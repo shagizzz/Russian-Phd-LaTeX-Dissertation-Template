@@ -63,15 +63,18 @@
 }{\counterwithin{figure}{chapter}}
 \ifnumequal{\value{contnumtab}}{1}{\counterwithout{table}{chapter}
 }{\counterwithin{table}{chapter}}
-%\include{Dissertation/part3}  
-\include{Dissertation/glava1}           % Глава 1
-\include{Dissertation/glava2}           % Глава 2
-\include{Dissertation/glava2_1} 
-\include{Dissertation/glava3}           % Глава 3
-\include{Dissertation/glava4}
-\include{Dissertation/glava5}
-\include{Dissertation/methods}
-\include{Dissertation/kompression}
+\include{Dissertation/part1}  
+\include{Dissertation/part2}  
+\include{Dissertation/part3}  
+%\include{Dissertation/glava1}           % Глава 1
+%\include{Dissertation/glava2}           % Глава 2
+%\include{Dissertation/glava2_1} 
+%\include{Dissertation/glava3}           % Глава 3
+%\include{Dissertation/glava4}
+%\include{Dissertation/glava5}
+%\include{Dissertation/methods}
+%\include{Dissertation/kompression}
+%\include{Dissertation/results}
 %\include{Dissertation/conclusion}      % Заключение
 %\include{Dissertation/acronyms}        % Список сокращений и условных обозначений
 %\include{Dissertation/dictionary}      % Словарь терминов
@@ -85,6 +88,6 @@
 \renewcommand*{\afterchapternum}{\par\nobreak\vskip \midchapskip}
 \renewcommand\thechapter{\Asbuk{chapter}} % Чтобы приложения русскими буквами нумеровались
 
-%\include{Dissertation/appendix}        % Приложения
+\include{Dissertation/appendix}        % Приложения
 
 \end{document}

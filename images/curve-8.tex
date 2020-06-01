@@ -1,0 +1,13 @@
+\begin{tikzpicture}
+    \begin{semilogxaxis}[]
+    
+    % ИГЭ-8
+    \addplot[smooth, no marks, green!10!lime!30!black] table [x=Size, y=GJ6822, col sep=semicolon] {data/hydrometer-cumulative.csv};
+    \addplot[smooth, no marks, green!10!lime!30!black] table [x=Size, y=GJ6884, col sep=semicolon] {data/hydrometer-cumulative.csv};
+    \addplot[smooth, no marks, green!10!lime!30!black] table [x=Size, y=GJ6846, col sep=semicolon] {data/hydrometer-cumulative.csv};
+    \addplot[smooth, no marks, green!10!lime!30!black] table [x=Size, y=GJ6890, col sep=semicolon] {data/hydrometer-cumulative.csv};
+    \addplot[smooth, no marks, green!10!lime!30!black] table [x=Size, y=GJ6888, col sep=semicolon] {data/hydrometer-cumulative.csv};
+    
+    
+    \end{semilogxaxis}
+\end{tikzpicture}

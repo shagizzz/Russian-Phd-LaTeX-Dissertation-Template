@@ -1,0 +1,29 @@
+\pgfplotsset{
+%samples=15,
+width=0.45\linewidth,
+xlabel={Диаметр частиц $d$, мм},
+ylabel={Содержание частиц, \%},
+%extra y ticks={45},
+legend pos=north west,
+ymin = 0,
+ymax = 100,
+}
+
+\begin{figure}
+	{\centering
+	\small
+	\subbottom[ИГЭ-6]{\input{images/curve-6}}
+	\hfill
+	\subbottom[ИГЭ-7]{\input{images/curve-7}}
+	}
+	\\
+	{\centering
+	\small
+	\subbottom[ИГЭ-8]{\input{images/curve-8}}
+	\hfill
+	\subbottom[ИГЭ-9]{\input{images/curve-9}}
+	}
+
+	\caption{Кумулятивные кривые гранулометрического состава исследованных грунтов}
+	\label{fig:curves}
+\end{figure}

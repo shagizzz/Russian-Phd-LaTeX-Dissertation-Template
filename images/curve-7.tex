@@ -1,0 +1,9 @@
+\begin{tikzpicture}
+    \begin{semilogxaxis}[]
+    
+    % ИГЭ-7
+    \addplot[smooth, no marks, lime!40!black] table [x=Size, y=GJ6898, col sep=semicolon] {data/hydrometer-cumulative.csv};
+    \addplot[smooth, no marks, lime!40!black] table [x=Size, y=GJ6874, col sep=semicolon] {data/hydrometer-cumulative.csv};
+    
+    \end{semilogxaxis}
+\end{tikzpicture}

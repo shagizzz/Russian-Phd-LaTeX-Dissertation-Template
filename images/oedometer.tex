@@ -1,0 +1,164 @@
+%\documentclass[border=10pt]{standalone}
+\documentclass[a4paper]{article}
+\usepackage{icomma}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\pgfplotsset{compat=newest}
+
+%\usepackage{filecontents}
+\usepackage{tikz}
+%\pgfplotsset{width=0.4,compat=1.8}
+\usepgfplotslibrary{ternary}
+\usetikzlibrary{plotmarks}
+
+\newcommand{\q}[2]{#1 \textit{#2}}
+
+\begin{document}
+
+\pgfplotsset{
+    discard if not/.style 2 args={
+        x filter/.code={
+            \edef\tempa{\thisrow{#1}}
+            \edef\tempb{#2}
+            \ifx\tempa\tempb
+            \else
+                \def\pgfmathresult{inf}
+            \fi
+        }
+    }
+}
+
+\makeatletter
+\pgfplotstableset{
+    discard if not/.style 2 args={
+        row predicate/.code={
+            \def\pgfplotstable@loc@TMPd{\pgfplotstablegetelem{##1}{#1}\of}
+            \expandafter\pgfplotstable@loc@TMPd\pgfplotstablename
+            \edef\tempa{\pgfplotsretval}
+            \edef\tempb{#2}
+            \ifx\tempa\tempb
+            \else
+                \pgfplotstableuserowfalse
+            \fi
+        }
+    }
+}
+\makeatother
+
+\pgfplotsset{
+	%samples=15,
+	width=\linewidth,
+	xlabel={Vertical stress $\\sigma_1$, kPa},
+	ylabel={Strain deformation $\epsilon_1$},
+	%extra y ticks={45},
+	legend pos=north west,
+	y dir=reverse, 
+	y tick label style={
+		/pgf/number format/.cd,
+			fixed,
+			fixed zerofill,
+			precision=3,
+		/tikz/.cd
+	},
+	x tick label style={
+		/pgf/number format/.cd,
+			fixed,
+			fixed zerofill
+		/tikz/.cd
+	}
+}
+\begin{tikzpicture}
+	\begin{semilogxaxis}[y dir=reverse]
+	\addplot[mark=*, red] table [x=Sigma, y=Epsilon, col sep=semicolon] {GJ6805.csv};
+	\end{semilogxaxis}
+\end{tikzpicture}
+
+\begin{tikzpicture}
+	\begin{semilogxaxis}[y dir=reverse]
+	\addplot[mark=*, red] table [x=Sigma, y=Epsilon, col sep=semicolon] {GJ6807.csv};
+	\end{semilogxaxis}
+\end{tikzpicture}
+
+\begin{tikzpicture}
+	\begin{semilogxaxis}[y dir=reverse]
+	\addplot[mark=*, red] table [x=Sigma, y=Epsilon, col sep=semicolon] {GJ6838.csv};
+	\end{semilogxaxis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+	\begin{semilogxaxis}[y dir=reverse]
+	\addplot[mark=*, red] table [x=Sigma, y=Epsilon, col sep=semicolon] {GJ6809.csv};
+	\end{semilogxaxis}
+\end{tikzpicture}
+
+
+
+\begin{tikzpicture}
+	\begin{semilogxaxis}[y dir=reverse]
+	\addplot[mark=*, red] table [x=Sigma, y=Epsilon, col sep=semicolon] {GJ6810.csv};
+	\end{semilogxaxis}
+\end{tikzpicture}
+
+\begin{tikzpicture}
+	\begin{semilogxaxis}[y dir=reverse]
+	\addplot[mark=*, red] table [x=Sigma, y=Epsilon, col sep=semicolon] {GJ6821.csv};
+	\end{semilogxaxis}
+\end{tikzpicture}
+
+\begin{tikzpicture}
+	\begin{semilogxaxis}[y dir=reverse]
+	\addplot[mark=*, red] table [x=Sigma, y=Epsilon, col sep=semicolon] {GJ6898.csv};
+	\end{semilogxaxis}
+\end{tikzpicture}
+
+\begin{tikzpicture}
+	\begin{semilogxaxis}[y dir=reverse]
+	\addplot[mark=*, red] table [x=Sigma, y=Epsilon, col sep=semicolon] {GJ6822.csv};
+	\end{semilogxaxis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+	\begin{semilogxaxis}[y dir=reverse]
+	\addplot[mark=*, red] table [x=Sigma, y=Epsilon, col sep=semicolon] {GJ6884.csv};
+	\end{semilogxaxis}
+\end{tikzpicture}
+
+\begin{tikzpicture}
+	\begin{semilogxaxis}[y dir=reverse]
+	\addplot[mark=*, red] table [x=Sigma, y=Epsilon, col sep=semicolon] {GJ6846.csv};
+	\end{semilogxaxis}§
+\end{tikzpicture}
+
+\begin{tikzpicture}
+	\begin{semilogxaxis}[y dir=reverse]
+	\addplot[mark=*, red] table [x=Sigma, y=Epsilon, col sep=semicolon] {GJ6855.csv};
+	\end{semilogxaxis}
+\end{tikzpicture}
+
+\begin{tikzpicture}
+	\begin{semilogxaxis}[y dir=reverse]
+	\addplot[mark=*, red] table [x=Sigma, y=Epsilon, col sep=semicolon] {GJ6859.csv};
+	\end{semilogxaxis}
+\end{tikzpicture}
+
+\begin{tikzpicture}
+	\begin{semilogxaxis}[y dir=reverse]
+	\addplot[mark=*, red] table [x=Sigma, y=Epsilon, col sep=semicolon] {GJ6865.csv};
+	\end{semilogxaxis}
+\end{tikzpicture}
+
+\begin{tikzpicture}
+	\begin{semilogxaxis}[y dir=reverse]
+	\addplot[mark=*, red] table [x=Sigma, y=Epsilon, col sep=semicolon] {GJ68A3.csv};
+	\end{semilogxaxis}
+\end{tikzpicture}
+
+\begin{tikzpicture}
+	\begin{semilogxaxis}[y dir=reverse]
+	\addplot[mark=*, red] table [x=Sigma, y=Epsilon, col sep=semicolon] {GJ68B7.csv};
+	\end{semilogxaxis}
+\end{tikzpicture}
+
+\end{document}

@@ -1,0 +1,58 @@
+%\pgfplotstableset{format=file}
+\pgfplotsset{width=0.6\linewidth}
+
+\begin{tikzpicture}
+    \begin{ternaryaxis}[
+        legend cell align={left},
+        %title=Spinel,
+        ternary limits relative=false,
+        %width=10cm,
+        %height=10cm,
+        xmax=100,
+        ymax=100,
+        zmax=100,
+        minor tick num=1,
+        grid=both,
+        xlabel={Глина, \%},
+        xlabel style={
+            at={(axis cs:100,0,0)},
+            anchor=south,
+            yshift=16pt,
+            align=center
+        },
+        ylabel={Песок, \%},
+        ylabel style={
+            at={(axis cs:0,100,0)},
+            anchor=10,
+            xshift=-11pt,
+            yshift=-16pt,
+            align=center
+        },
+        zlabel={Пыль, \%},
+        zlabel style={
+            at={(axis cs:0,0,100)},
+            anchor=north west,
+            xshift=16pt,
+            yshift=-11pt,
+            align=center
+        },
+    ]
+
+        \addplot3 [only marks, mark=*, red!70!orange!80!black] 
+        table [x=Clay, y=Sand, z=Silt, col sep=semicolon, row sep=newline] {data/gran-activity-6.csv};
+        \addlegendentry{ИГЭ-6}
+
+        \addplot3 [only marks, mark=*, lime!50!yellow!40!black]
+        table [x=Clay, y=Sand, z=Silt, col sep=semicolon, row sep=newline] {data/gran-activity-7.csv};
+        \addlegendentry{ИГЭ-7}
+
+        \addplot3 [only marks, mark=*, green!50!lime!30!black] 
+        table [x=Clay, y=Sand, z=Silt, col sep=semicolon, row sep=newline] {data/gran-activity-8.csv};
+        \addlegendentry{ИГЭ-8}
+
+        \addplot3+[only marks, mark=*, red!80!orange!50!black] 
+        table [x=Clay, y=Sand, z=Silt, col sep=semicolon, row sep=newline] {data/gran-activity-9.csv};
+        \addlegendentry{ИГЭ-9}
+
+    \end{ternaryaxis}
+\end{tikzpicture}

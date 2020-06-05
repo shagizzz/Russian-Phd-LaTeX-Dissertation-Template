@@ -80,7 +80,7 @@
     \put(0.07052164,0.71164762){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}540\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{oedometerCazagrande+monolith+7.pdf}}%
     \put(0.27440393,0.00687729){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Вертикальное напряжение $\sigma_1$, кПа\end{tabular}}}}%
-    \put(0.0221554,0.24688791){\color[rgb]{0,0,0}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Коэффициентпористости, $e$, д.е.\end{tabular}}}}}%
+    \put(0.0221554,0.24688791){\color[rgb]{0,0,0}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Коэф. пористости, $e$, д.е.\end{tabular}}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=3]{oedometerCazagrande+monolith+7.pdf}}%
   \end{picture}%
 \endgroup%
